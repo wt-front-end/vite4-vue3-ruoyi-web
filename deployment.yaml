@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jsjw-web
+  namespace: jsjw
+  labels:
+    web: jsjw-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      web: jsjw-web
+  template:
+    metadata:
+      labels:
+        web: jsjw-web
+    spec:
+      nodeSelector:
+        role2: worker
+      imagePullSecrets:
+        - name: image
+      containers:
+        - name: jsjw-web
+          image: reg.watone.local:8385/jsjw/jsjw-web:latest
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jsjw-web
+  namespace: jsjw
+  labels:
+    web: jsjw-web
+spec:
+  type: NodePort
+  ports:
+    - name: jsjw-web
+      port: 3000
+      targetPort: 3000
+      nodePort: 31135
+  selector:
+    web: jsjw-web

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="expires" content="0" />
+  <link rel="icon" href="/favicon.ico" />
+  <title>一网监督管理系统</title>
+  <!--[if lt IE 11
+      ]><script>
+        window.location.href = "/html/ie.html";
+      </script><!
+    [endif]-->
+  <!-- /**
+   * @Description: 如果调接口看到此内容,需要在接口的路径前面加上/prod-api调用后台内容
+   * @Date: 2022-03-31 11:10:46
+   * ****************************************************************
+   */   -->
+  <style>
+    html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .chromeframe {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+    }
+
+    #loader-wrapper #loader {
+      display: block;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 45%;
+      height: 100%;
+      margin: 0 auto;
+      background: url(https://hltm.jw.linan.gov.cn/linanjiwei/data-web/loading.png) no-repeat 0 20%/100%;
+      z-index: 1001;
+    }
+
+    #loader-wrapper .loader-section {
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background-color: #e3e3e3;
+      z-index: 1000;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    #loader-wrapper .loader-section.section-left {
+      left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+      right: 0;
+    }
+
+    #loader-wrapper .load_title {
+      color: #000;
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+      z-index: 9999999999999;
+      position: absolute;
+      bottom: 20%;
+      line-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

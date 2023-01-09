@@ -1,0 +1,17 @@
+image: docker
+services:
+  - docker:dind
+stages:
+  - deploy
+step-deploy-prod:
+  stage: deploy
+  script:
+    - docker build  -t app/jsjw.web  .
+        # 这里是查看当前的服务器上有没有正在运行或者存在我们之前运行过的项目容器，如果有删除了
+    - if [ $(docker ps -aq --filter name=jsjwweb) ];then docker rm -f jsjwweb;fi
+    - docker run -d -p 31135:3000/tcp --rm  --name jsjwweb app/jsjw.web
+  only:
+    refs:
+      - main
+  tags:
+    - build
