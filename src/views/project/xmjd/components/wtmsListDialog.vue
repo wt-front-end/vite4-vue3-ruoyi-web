@@ -1,10 +1,10 @@
 <!--
  * @Author: xkloveme
  * @Date: 2022-04-12 18:02:08
- * @LastEditTime: 2022-04-24 09:48:07
+ * @LastEditTime: 2023-01-09 10:12:51
  * @LastEditors: xkloveme
  * @Description: 审批记录
- * @FilePath: /la-ft-web/src/views/bulletin/notary/components/spjlDialog.vue
+ * @FilePath: /RuoYi-Vue3/src/views/project/xmjd/components/wtmsListDialog.vue
  * @Copyright © xkloveme
 -->
 <template>
@@ -55,7 +55,7 @@ const show = computed({
   }
 });
 const queryRef = ref(null);
-const form = reactive({
+let form = reactive({
   checkTitle: '',
   checkDate: '',
   fileList: [],

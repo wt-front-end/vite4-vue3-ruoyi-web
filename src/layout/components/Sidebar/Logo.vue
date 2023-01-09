@@ -107,8 +107,8 @@ const sideTheme = computed(() => store.state.settings.sideTheme);
       font-family: FZZhengHeiS-B-GB;
       font-weight: 400;
       color: #fff;
-      line-height: 24px;
-      margin: 21px 0 44px;
+      line-height: 29px;
+      margin: 20px 0 0;
     }
   }
 
