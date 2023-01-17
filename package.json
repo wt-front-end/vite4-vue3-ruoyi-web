@@ -1,8 +1,9 @@
 {
-  "name": "ruoyi-vue3",
-  "version": "3.8.4",
-  "description": "嘉善管理系统",
-  "author": "xkloveme",
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "author": "<%= author %>",
+  "description": "<%= description %>",
+  "email": "<%= email %>",
   "license": "MIT",
   "scripts": {
     "test-var": "echo $npm_execpath",
